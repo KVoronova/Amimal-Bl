@@ -4,7 +4,7 @@
     --color-black: #000;
     --color-white: #fff;
     --color-green: #1B4D3E;
-    --grey-color: #b8b8b8;
+    --light-green-color: #05c08e;
 
   }
 
@@ -17,8 +17,9 @@ body {
 }
 
 a {
-    color: var(--grey-color);
+    color: var(--light-green-color);
     text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
@@ -74,10 +75,6 @@ header a {
     text-shadow: 0 5px 10px #0004;
 }
 
-.carousel .list .item .content .author {
-    font-weight: 600;
-    letter-spacing: 5px;
-}
 
 .carousel .list .item .content .title,
 .carousel .list .item .content .topic {
@@ -87,7 +84,7 @@ header a {
 }
 
 .carousel .list .item .content .topic {
-    color: var(--color-green);
+    color: var(--light-green-color);
 }
 
 .carousel .list .item .content .buttons {
@@ -109,8 +106,8 @@ header a {
 
 .carousel .list .item .content button:nth-child(2) {
     background-color: transparent;
-    color: var(--color-green);
-    border: 1px solid var(--color-green);
+    color: var(--light-green-color);
+    border: 1px solid var(--light-green-color);
 }
 
 
@@ -276,7 +273,7 @@ header a {
     position: absolute;
     bottom: 0;
     left: 0;
-    animation: outImage 0.5s linear 1 forwards;
+    animation: outImage .5s linear 1 forwards;
 }
 
 @keyframes outImage{

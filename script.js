@@ -5,7 +5,7 @@ let listItem = document.querySelector('.carousel .list');
 let thumbnail = document.querySelector('.carousel .thumbnail');
 
 let timeRunning = 2000;
-let timeAutoNext = 10000;
+let timeAutoNext = 15000;
 let runTimeOut;
 let runAutoRun = setTimeout(()=> {
     nextBtn.click();

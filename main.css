@@ -13,7 +13,7 @@ body {
     background-color:var(--color-black);
     color: var(--color-white);
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 a {
@@ -82,7 +82,7 @@ header a {
 .carousel .list .item .content .title,
 .carousel .list .item .content .topic {
     font-weight: 700;
-    font-size: 5em;
+    font-size: 4.5em;
     list-style: 1.3rem;
 }
 
@@ -328,3 +328,57 @@ header a {
     left: 0;
 }
 
+.carousel.next .time,
+.carousel.prev .time {
+    width: 100%;
+    animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning {
+    to {
+        width: 0;
+    }
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px){
+    .carousel .list .item .content .title,
+    .carousel .list .item .content .topic {
+        font-size: 4em;
+        list-style: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .carousel .list .item .content .title,
+    .carousel .list .item .content .topic {
+        font-size: 3em;
+        list-style: 1rem;
+    }
+
+    .carousel .list .item .content {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+
+    nav {
+        font-size: 15px;
+    }
+
+    header a {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    header a {
+        margin-right: 10px;
+    }
+}

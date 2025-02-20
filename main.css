@@ -388,6 +388,9 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 10px 5px #00000082;
     transition: all .4s; 
+    min-height: 350px;
+    height: 100%;
+    object-fit: cover;
   
 }
 

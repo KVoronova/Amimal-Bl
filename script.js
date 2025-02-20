@@ -5,7 +5,7 @@ let listItem = document.querySelector('.carousel .list');
 let thumbnail = document.querySelector('.carousel .thumbnail');
 
 let timeRunning = 2000;
-let timeAutoNext = 15000;
+let timeAutoNext = 155000;
 let runTimeOut;
 let runAutoRun = setTimeout(()=> {
     nextBtn.click();
@@ -46,3 +46,21 @@ function showSlider(type) {
         nextBtn.click();
     }, timeAutoNext);
 }
+
+
+
+
+
+
+
+
+
+
+// document.addEventListener('mousemove', e => {
+//     Object.assign(document.documentElement, {
+//         style: `
+//         --move-x: ${(e.clientX - window.innerWidth / 2) * -.005}deg;
+//         --move-y: ${(e.clientY - window.innerHeight / 2) * -.01}deg;
+//         `
+//     })
+//     })

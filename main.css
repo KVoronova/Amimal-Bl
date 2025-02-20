@@ -6,6 +6,8 @@
     --color-green: #1B4D3E;
     --light-green-color: #05c08e;
 
+    --transition: 1s cubic-bezier(.05, .5, 0, 1);
+
   }
 
 body {
@@ -14,16 +16,6 @@ body {
     color: var(--color-white);
     margin: 0;
     font-size: 16px;
-}
-
-a {
-    color: var(--light-green-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a:hover {
-    color: var(--color-green);
 }
 
 header {
@@ -39,6 +31,16 @@ header {
 
 header a {
     margin-right: 40px;
+}
+
+a {
+    color: var(--light-green-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--color-green);
 }
 
 /* CAROUSEL */
@@ -338,6 +340,108 @@ header a {
 }
 
 
+
+/* SECTION GALLERY */
+
+.gallery-container {
+    overflow: hidden;
+    background-color: var(--color-green);
+    /* padding: 60px; */
+}
+
+.gallery-container h2 {
+    font-size: 4.5em;
+    margin-left: 5%;
+    
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+    padding: 0 60px 60px 60px;
+}
+
+.grid-box {
+    position: relative;   
+    transition: all .4s; 
+}
+
+.grid-box:hover {
+    transition: 0.4s all ease-out;
+    transform: scale(1.02);
+}
+
+.grid-box p {
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.grid-box img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 5px #00000082;
+    transition: all .4s; 
+  
+}
+
+
+.grid-box img:hover {
+    box-shadow: 0 5px 10px 5px #05c08e;
+    /* filter: blur(1px); */
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px); 
+ */
+
+ /* 
+
+     transform-style: preserve-3d;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+    will-change: transform;
+    transition: transform var(--transition);
+
+.layers {
+    position: absolute;
+    inset: -160px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer-1 {
+    transform: translateZ(-55px) scale(1.06);
+}
+
+.layer-2 {
+    transform: translateZ(80px) scale(.98);
+} */
+
+
+
+
+
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1024px){
@@ -379,3 +483,5 @@ header a {
         margin-right: 10px;
     }
 }
+
+

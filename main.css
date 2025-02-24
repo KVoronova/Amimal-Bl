@@ -443,8 +443,8 @@ text-align: center;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 1);
+    text-align: center;
 }
-
 
 .btn-down {
     background: transparent;
@@ -456,8 +456,26 @@ text-align: center;
     font-size: 15px;
 }
 
+.layers-item img {
+    width: 20px;
+    padding-right: 10px;
+}
 
+.item-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-white);
+    text-shadow: 10px 5px 5px #1B4D3E;
+    padding: 10px 20px;
+    margin: 0;
+}
 
+.item-coordinats {
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 

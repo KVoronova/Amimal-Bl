@@ -48,6 +48,37 @@ function showSlider(type) {
 }
 
 
+// MAP
+// Функция для инициализации карты
+function initMap() {
+    const center = [53.902735, 27.555691];
+    const map = new ymaps.Map('map', {
+        center: center, 
+        zoom: 6,
+    });
+
+    // Массив с координатами
+    const markers = [
+        { coords: [52.574227, 23.804779], title: "Belovezhskaya Pushcha" },
+        { coords: [54.747713, 28.312632], title: "Berezinsky Nature Reserve" },
+        { coords: [54.909583, 26.706681], title: "Narochansky National Park" },
+        { coords: [55.639491, 27.031618], title: "Braslav Lakes" },
+        { coords: [54.022159, 26.596853], title: "Nalibokskaya Pushcha" },
+        { coords: [51.652087, 29.996670], title: "Polesie State Radiation Reserve" }
+    ];
+
+    // Добавляем маркеры на карту
+    markers.forEach(marker => {
+        const placemark = new ymaps.Placemark(
+            marker.coords, 
+            { hintContent: marker.title }, 
+            { preset: 'islands#blueDotIcon' }
+        );
+        map.geoObjects.add(placemark);
+    });
+}
+
+ymaps.ready(initMap);
 
 
 
@@ -56,11 +87,3 @@ function showSlider(type) {
 
 
 
-// document.addEventListener('mousemove', e => {
-//     Object.assign(document.documentElement, {
-//         style: `
-//         --move-x: ${(e.clientX - window.innerWidth / 2) * -.005}deg;
-//         --move-y: ${(e.clientY - window.innerHeight / 2) * -.01}deg;
-//         `
-//     })
-//     })
